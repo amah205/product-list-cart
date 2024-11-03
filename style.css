@@ -59,6 +59,35 @@ body{
     color: var(--Rose900);
 }
 
+
+.controls {
+    display: flex;
+    max-width: 100px;
+    justify-content: space-around;
+    position: inherit;
+    left: 30%;
+    background-color: var(--Red);
+    bottom: 25px;
+    align-items: center;
+    border: 1px solid var(--Rose900);
+    border-radius: 50vh;
+    padding: 0 0.9rem;
+    min-width: 120px;
+    color: var(--Rose900);
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+
+}
+
+.minus,.add,.item-count {
+    color: #fff;
+}
+    
+.hidden {
+    display: none;
+} 
+
+
 .inner-wrap{
     max-width: 1440px; 
     border: 2px solid red;
