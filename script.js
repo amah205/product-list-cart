@@ -85,3 +85,14 @@ const updateCart = () => {
     document.querySelector('.secheaders').innerText = `(${totalItems})`;
     document.querySelector('.total-amount').innerText = `$${totalAmount.toFixed(2)}`;
 };
+
+const removeItem = () => {
+    const removeButton = document.querySelector('.remove-item')
+    removeButton.addEventListener('click', () => {
+        if( cart[item]) {
+            delete cart[item]
+        }
+        return
+    })
+    updateCart()
+}
