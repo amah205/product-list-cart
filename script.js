@@ -76,6 +76,10 @@ const updateCart = () => {
 
             cartContents.appendChild(dessertItem);
 
+            dessertItem.querySelector('.remove-item').addEventListener('click', () => {
+                removeItem(item)
+            })
+
             totalItems += quantity;
             totalAmount += quantity * price;
         }
@@ -86,13 +90,10 @@ const updateCart = () => {
     document.querySelector('.total-amount').innerText = `$${totalAmount.toFixed(2)}`;
 };
 
-const removeItem = () => {
-    const removeButton = document.querySelector('.remove-item')
-    removeButton.addEventListener('click', () => {
-        if( cart[item]) {
-            delete cart[item]
-        }
-        return
-    })
-    updateCart()
+const removeItem = (item) => {
+    
+    if(cart[item]) {
+        delete cart[item]
+        updateCart()
+    }
 }
