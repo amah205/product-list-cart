@@ -81,7 +81,7 @@ const updateCart = () => {
         }
     }
 
-    // Update total items and amount in the UI
+    // Update total items and amount in the UI design 
     document.querySelector('.secheaders').innerText = `(${totalItems})`;
     document.querySelector('.total-amount').innerText = `$${totalAmount.toFixed(2)}`;
 };
